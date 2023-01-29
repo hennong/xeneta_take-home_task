@@ -1,3 +1,10 @@
+import { Stack } from '@mui/system'
+import { SearchBar } from './Components/SearchBar/SearchBar'
+
 export const App = () => {
-  return <div>Hello World!</div>
+  return (
+    <Stack>
+      <SearchBar />
+    </Stack>
+  )
 }
