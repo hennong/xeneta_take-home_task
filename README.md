@@ -8,5 +8,5 @@ Add the x-api-key key to the Config.ts (in src/Api) and then run "yarn/npm run w
 
 ##  Details
 
-It took me a bit more 5 hours (including planning and researching technologies) to finish this task.
-The only thing that I kinda struggled with was Chartjs (the technology I used to display the Data). It is way easier to use than d3js but getting the hang of it was still time consuming to get used to it and learning to display the data the way I want to. Everything else was fine though.
+It took me a bit more than 5 hours (including planning and researching technologies) to finish this task.
+The only thing that I struggled with was Chartjs (the technology I used to display the Data). It is way easier to use than d3js but getting the hang of it and learning to display the data the way I want to, was still time consuming. Everything else was fine though.
