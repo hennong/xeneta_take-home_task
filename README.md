@@ -4,7 +4,7 @@ My solution to the take-home task by Xeneta.
 
 ## Instructions
 
-Add the x-api-key key to the Config.ts and then run "yarn/npm run webpack" to build the project. After that you can start the application with "yarn/npm start".
+Add the x-api-key key to the Config.ts (in src/Api) and then run "yarn/npm run webpack" to build the project. After that you can start the application with "yarn/npm start".
 
 ##  Details
 
