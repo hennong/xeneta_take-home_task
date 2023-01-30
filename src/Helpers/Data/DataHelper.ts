@@ -18,7 +18,7 @@ export const getDatasets = (
     ...(showHighest
       ? [
           {
-            label: 'Highest Rates',
+            label: 'Highest Rate',
             data: highestRates,
             borderColor: MarketRateColor.Highest,
             backgroundColor: '#ffe45e'
@@ -29,7 +29,7 @@ export const getDatasets = (
     ...(showAverage
       ? [
           {
-            label: 'Average Rates',
+            label: 'Average Rate',
             data: averageRates,
             borderColor: MarketRateColor.Average,
             backgroundColor: '#368f8b'
@@ -40,7 +40,7 @@ export const getDatasets = (
     ...(showLowest
       ? [
           {
-            label: 'Lowest Rates',
+            label: 'Lowest Rate',
             data: lowestRates,
             borderColor: MarketRateColor.Lowest,
             backgroundColor: '#f26a8d'

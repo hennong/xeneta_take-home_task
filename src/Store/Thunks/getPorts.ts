@@ -4,7 +4,7 @@ import { searchActions } from '../States/SearchState'
 import { StoreThunk } from '../Store'
 
 export const getPorts = (): StoreThunk<Promise<void>> => {
-  return async (dispatch, getState): Promise<void> => {
+  return async (dispatch): Promise<void> => {
     try {
       const ports = await getPortsFromApi()
 
