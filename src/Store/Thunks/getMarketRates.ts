@@ -11,9 +11,9 @@ export const getMarketRates = (): StoreThunk<Promise<void>> => {
       const originCode = getState().search.origin?.code!
       const destinationCode = getState().search.destination?.code!
 
-      const rawMarketRatesData = await getMarketRatesFromApi(originCode, destinationCode)
+      const sourceMarketRates = await getMarketRatesFromApi(originCode, destinationCode)
 
-      const marketRates = areRatesSet(rawMarketRatesData) ? rawMarketRatesData : []
+      const marketRates = areRatesSet(sourceMarketRates) ? sourceMarketRates : []
 
       dispatch(searchActions.setMarketRates(marketRates))
 
