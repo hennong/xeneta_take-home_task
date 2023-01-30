@@ -11,3 +11,9 @@ export const theme: Theme = createTheme({
     }
   }
 })
+
+export enum MarketRateColor {
+  Highest = '#ffbc42',
+  Average = '#218380',
+  Lowest = '#d81159'
+}
