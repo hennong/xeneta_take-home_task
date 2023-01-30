@@ -1,6 +1,6 @@
 import { Stack } from '@mui/system'
 import { useSelector } from '../../Store/Store'
-import { Graph } from './Graph/Graph'
+import { GraphView } from './Graph/GraphView'
 import { textStyles } from './Graph/Graph.styles'
 import { viewStyles } from './View.styles'
 
@@ -21,7 +21,7 @@ export const View: React.FC = () => {
         ) : noData ? (
           `Got no Data for the Search`
         ) : (
-          <Graph />
+          <GraphView />
         )}
       </Stack>
     </Stack>
