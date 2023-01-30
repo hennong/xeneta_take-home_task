@@ -1,4 +1,5 @@
 import { getMarketRates as getMarketRatesFromApi } from '../../Api/Services/Data.service'
+import { areRatesSet } from '../../Helpers/Data/DataHelper'
 import { searchActions } from '../States/SearchState'
 import { StoreThunk } from '../Store'
 
@@ -10,7 +11,9 @@ export const getMarketRates = (): StoreThunk<Promise<void>> => {
       const originCode = getState().search.origin?.code!
       const destinationCode = getState().search.destination?.code!
 
-      const marketRates = await getMarketRatesFromApi(originCode, destinationCode)
+      const rawMarketRatesData = await getMarketRatesFromApi(originCode, destinationCode)
+
+      const marketRates = areRatesSet(rawMarketRatesData) ? rawMarketRatesData : []
 
       dispatch(searchActions.setMarketRates(marketRates))
 
@@ -20,7 +23,7 @@ export const getMarketRates = (): StoreThunk<Promise<void>> => {
 
       return Promise.reject()
     } finally {
-      dispatch(searchActions.setIsLoading(true))
+      dispatch(searchActions.setIsLoading(false))
     }
   }
 }
